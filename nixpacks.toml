@@ -2,9 +2,9 @@
 nixPkgs = [
   "php83",
   "php83Packages.composer",
-  "php83Extensions.gd"
+  "php83Extensions.gd",
+  "nodejs"
 ]
 
 [variables]
-NIXPACKS_NODE_VERSION = "22"
 NIXPACKS_PHP_VERSION = "8.3"
