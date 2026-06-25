@@ -36,7 +36,6 @@ class JadwalPengunjungController extends Controller
 
 public function exportExcel()
     {
-        dd('Export Excel');
         return Excel::download(new JadwalExport, 'laporan-jadwal-' . date('Y-m-d') . '.xlsx');
     }
 
