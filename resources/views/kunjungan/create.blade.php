@@ -77,7 +77,6 @@
                     @error('tanggal_kunjungan') <p class="text-xs text-red-500 font-medium">{{ $message }}</p> @enderror
                 </div>
 
-                {{-- Status Dropdown Pengunjung --}}
 
             </div>
 

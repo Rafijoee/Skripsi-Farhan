@@ -16,6 +16,7 @@ class KunjunganController extends Controller
 
     public function store(Request $request)
     {
+        dd
         $validated = $request->validate([
             'nama' => 'required|string|max:255',
             'nik' => 'required|string|max:16',
@@ -27,6 +28,7 @@ class KunjunganController extends Controller
         ]);
         $status = 'Pending'; // Set the default status to "Pending"
         $validated['status'] = $status;
+        dd($validated);
         $nama = Detensi::find($validated['deteni_id'])->nama;
 
         Pengunjung::create($validated);
