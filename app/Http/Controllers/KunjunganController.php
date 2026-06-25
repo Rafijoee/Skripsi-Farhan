@@ -16,7 +16,6 @@ class KunjunganController extends Controller
 
     public function store(Request $request)
     {
-        dd
         $validated = $request->validate([
             'nama' => 'required|string|max:255',
             'nik' => 'required|string|max:16',
