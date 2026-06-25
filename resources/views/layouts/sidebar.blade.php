@@ -9,7 +9,7 @@
         <div>
             <div class="p-6 border-b border-blue-900">
                 <div class="flex items-center gap-3">
-                    <img src="{{ asset('images/logo.jpg') }}" class="w-12">
+                    <img src="{{ asset('images/logo.png') }}" class="w-12">
                     <div>
                         <h2 class="font-bold text-xl leading-tight">RUDENIM SURABAYA</h2>
                         <p class="text-xs text-blue-200 mt-1">Sistem Pencatatan Pengunjung</p>
@@ -17,12 +17,31 @@
                 </div>
             </div>
 
-            <nav class="mt-8 px-4">
-                <a href="{{ route('dashboard') }}" class="flex items-center gap-4 px-5 py-4 rounded-xl bg-blue-600 mb-3">🏠 Dashboard</a>
-                <a href="{{ route('visitors.index') }}" class="flex items-center gap-4 px-5 py-4 rounded-xl hover:bg-blue-800 mb-3">👥 Data Pengunjung</a>
-                <a href="{{ route('detention.index') }}" class="flex items-center gap-4 px-5 py-4 rounded-xl hover:bg-blue-800 mb-3">👤 Data Detensi</a>
-                <a href="{{ route('schedule.index') }}" class="flex items-center gap-4 px-5 py-4 rounded-xl hover:bg-blue-800">📅 Jadwal Pengunjung</a>
-            </nav>
+        <nav class="mt-8 px-4">
+            {{-- Menu Dashboard --}}
+            <a href="{{ route('dashboard') }}" 
+            class="flex items-center gap-4 px-5 py-4 rounded-xl mb-3 transition-colors {{ Route::is('dashboard') ? 'bg-blue-700 font-semibold text-white border-l-4 border-blue-500' : 'hover:bg-blue-800 text-blue-100' }}">
+            🏠 Dashboard
+            </a>
+
+            {{-- Menu Data Pengunjung --}}
+            <a href="{{ route('visitors.index') }}" 
+            class="flex items-center gap-4 px-5 py-4 rounded-xl mb-3 transition-colors {{ Route::is('visitors.*') ? 'bg-blue-700 font-semibold text-white border-l-4 border-blue-500' : 'hover:bg-blue-800 text-blue-100' }}">
+            👥 Data Pengunjung
+            </a>
+
+            {{-- Menu Data Detensi --}}
+            <a href="{{ route('detensi.index') }}" 
+            class="flex items-center gap-4 px-5 py-4 rounded-xl mb-3 transition-colors {{ Route::is('detention.*') ? 'bg-blue-700 font-semibold text-white border-l-4 border-blue-500' : 'hover:bg-blue-800 text-blue-100' }}">
+            👤 Data Detensi
+            </a>
+
+            {{-- Menu Jadwal Pengunjung --}}
+            <a href="{{ route('schedule.index') }}" 
+            class="flex items-center gap-4 px-5 py-4 rounded-xl transition-colors {{ Route::is('schedule.*') ? 'bg-blue-700 font-semibold text-white border-l-4 border-blue-500' : 'hover:bg-blue-800 text-blue-100' }}">
+            📅 Jadwal Pengunjung
+            </a>
+        </nav>
         </div>
 
         <!-- Copyright dipindah ke bawah flex agar tidak menutupi menu -->

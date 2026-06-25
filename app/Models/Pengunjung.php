@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo; 
 
 
-#[Fillable(['nama', 'nik', 'telepon', 'tanggal_kunjungan', 'status'])]
+#[Fillable(['nama', 'nik', 'telepon', 'tanggal_kunjungan', 'status', 'deteni_id'])]
 class Pengunjung extends Model
 {
     use HasFactory;

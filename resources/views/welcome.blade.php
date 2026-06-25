@@ -11,7 +11,7 @@
             <!-- Logo -->
             <div class="flex items-center gap-4">
 
-                <img src="{{ asset('images/logo.jpg') }}"
+                <img src="{{ asset('images/logo.png') }}"
                     class="w-14 h-14">
 
                 <div>
@@ -92,7 +92,7 @@
 
                 </p>
 
-                <a href="#"
+                <a href="{{ route('daftar-kunjungan.create') }}"
                     class="inline-flex items-center mt-8 bg-blue-700 text-white px-8 py-4 rounded-xl text-xl font-semibold hover:bg-blue-800">
 
                     <i class="fa-regular fa-calendar mr-3"></i>
