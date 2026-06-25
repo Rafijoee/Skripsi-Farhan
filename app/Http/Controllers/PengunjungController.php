@@ -103,6 +103,7 @@ public function create()
         ]);
 
         $pengunjung->update($validated);
+        dd($validated);
 
         return redirect()
             ->route('visitors.index')
