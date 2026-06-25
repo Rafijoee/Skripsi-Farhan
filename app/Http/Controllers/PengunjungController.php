@@ -93,13 +93,13 @@ public function create()
     public function update(Request $request, Pengunjung $pengunjung)
     {
         $validated = $request->validate([
-            'nama'             => 'required|string|max:255',
-            'nik'              => 'required|string|max:20|unique:pengunjungs,nik,' . $pengunjung->id,
-            'telepon'          => 'required|string|max:20',
-            'deteni_id'        => 'required|exists:detensis,id',
+            'nama'              => 'required|string|max:255',
+            'nik'               => 'required|string|max:20',
+            'telepon'           => 'required|string|max:20',
+            'deteni_id'         => 'required|exists:detensis,id',
             'tanggal_kunjungan' => 'required|date',
-            'status'           => 'required|in:Hadir,Pending,Ditolak',
-            'catatan'          => 'nullable|string',
+            'status'            => 'required|in:Hadir,Pending,Ditolak',
+            'catatan'           => 'nullable|string',
         ]);
 
         $pengunjung->update($validated);
