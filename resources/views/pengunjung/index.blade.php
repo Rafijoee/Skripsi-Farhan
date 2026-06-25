@@ -208,14 +208,6 @@
                         {{-- Aksi --}}
                         <td class="px-6 py-4">
                             <div class="flex items-center justify-center gap-2">
-                                {{-- View --}}
-                                <a
-                                    href="{{ route('visitors.show', $visitor->id) }}"
-                                    title="Lihat Detail"
-                                    class="w-8 h-8 flex items-center justify-center rounded-lg bg-gray-100 hover:bg-blue-100 text-gray-500 hover:text-blue-600 transition"
-                                >
-                                    <i class="ri-eye-line text-sm"></i>
-                                </a>
 
                                 {{-- Edit --}}
                                 <a
