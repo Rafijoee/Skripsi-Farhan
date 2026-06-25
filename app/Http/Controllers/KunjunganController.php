@@ -27,6 +27,7 @@ class KunjunganController extends Controller
         ]);
         $status = 'Pending'; // Set the default status to "Pending"
         $validated['status'] = $status;
+        dd($validated);
         $nama = Detensi::find($validated['deteni_id'])->nama;
 
         Pengunjung::create($validated);

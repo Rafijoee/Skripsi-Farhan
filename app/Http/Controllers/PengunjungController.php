@@ -90,19 +90,19 @@ public function create()
     /**
      * Update the specified Pengunjung in storage.
      */
-    public function update(Request $request, Pengunjung $Pengunjung)
+    public function update(Request $request, Pengunjung $pengunjung)
     {
         $validated = $request->validate([
             'nama'             => 'required|string|max:255',
-            'nik'              => 'required|string|max:20',
+            'nik'              => 'required|string|max:20|unique:pengunjungs,nik,' . $pengunjung->id,
             'telepon'          => 'required|string|max:20',
             'deteni_id'        => 'required|exists:detensis,id',
-            'jadwal_kunjungan' => 'required|date',
+            'tanggal_kunjungan' => 'required|date',
             'status'           => 'required|in:Hadir,Pending,Ditolak',
             'catatan'          => 'nullable|string',
         ]);
 
-        $Pengunjung->update($validated);
+        $pengunjung->update($validated);
 
         return redirect()
             ->route('visitors.index')
