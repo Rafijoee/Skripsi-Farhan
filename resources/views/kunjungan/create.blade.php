@@ -25,7 +25,7 @@
         </div>
     @endif
     <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
-        <form action="{{ route('visitors.store') }}" method="POST" class="space-y-5">
+        <form action="{{ route('daftar-kunjungan.store') }}" method="POST" class="space-y-5">
             @csrf
 
             {{-- Nama Pengunjung --}}

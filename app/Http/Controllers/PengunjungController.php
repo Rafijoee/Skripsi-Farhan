@@ -94,7 +94,7 @@ public function create()
     {
         $validated = $request->validate([
             'nama'             => 'required|string|max:255',
-            'nik'              => 'required|string|max:20|unique:Pengunjungs,nik,',
+            'nik'              => 'required|string|max:20|unique:pengunjungs,nik,' . $Pengunjung->id,
             'telepon'          => 'required|string|max:20',
             'deteni_id'        => 'required|exists:detenis,id',
             'jadwal_kunjungan' => 'required|date',
