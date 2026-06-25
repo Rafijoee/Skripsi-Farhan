@@ -99,11 +99,9 @@ public function create()
             'deteni_id'         => 'required|exists:detensis,id',
             'tanggal_kunjungan' => 'required|date',
             'status'            => 'required|in:Hadir,Pending,Ditolak',
-            'catatan'           => 'nullable|string',
         ]);
 
         $pengunjung->update($validated);
-        dd($validated);
 
         return redirect()
             ->route('visitors.index')
