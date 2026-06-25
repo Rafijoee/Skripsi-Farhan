@@ -27,7 +27,12 @@ Route::post('/daftar-kunjungan', [KunjunganController::class, 'store'])->name('d
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    Route::resource('/visitors', PengunjungController::class);
+    Route::get('/visitors', [PengunjungController::class, 'index'])->name('visitors.index');
+    Route::get('/visitors/create', [PengunjungController::class, 'create'])->name('visitors.create');
+    Route::post('/visitors', [PengunjungController::class, 'store'])->name('visitors.store');
+    Route::get('/visitors/{pengunjung}/edit', [PengunjungController::class, 'edit'])->name('visitors.edit');
+    Route::put('/visitors/{pengunjung}', [PengunjungController::class, 'update'])->name('visitors.update');
+    Route::delete('/visitors/{pengunjung}', [PengunjungController::class, 'destroy'])->name('visitors.destroy');
     Route::resource('/detensi', DetensiController::class);
     Route::get('/jadwal', [JadwalPengunjungController::class, 'index'])->name('schedule.index');
     Route::delete('/detensi/{id}', [DetensiController::class, 'destroy'])->name('detention.destroy');
