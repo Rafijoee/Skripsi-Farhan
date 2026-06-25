@@ -96,7 +96,7 @@ public function create()
             'nama'             => 'required|string|max:255',
             'nik'              => 'required|string|max:20|unique:pengunjungs,nik,' . $Pengunjung->id,
             'telepon'          => 'required|string|max:20',
-            'deteni_id'        => 'required|exists:detenis,id',
+            'deteni_id'        => 'required|exists:detensis,id',
             'jadwal_kunjungan' => 'required|date',
             'status'           => 'required|in:Hadir,Pending,Ditolak',
             'catatan'          => 'nullable|string',
