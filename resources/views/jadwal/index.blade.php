@@ -95,15 +95,11 @@
 
         {{-- Action Buttons --}}
         <div class="flex flex-wrap items-center xl:justify-end gap-3 xl:self-end">
-            <a href="#" class="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition-colors shadow-sm w-full sm:w-auto">
-                <i class="ri-add-line text-lg"></i>
-                Tambah Jadwal
-            </a>
-            <a href="#" class="flex items-center justify-center gap-2 bg-white hover:bg-green-50 border border-green-200 text-green-600 font-bold px-4 py-2.5 rounded-xl text-sm transition-colors shadow-sm">
+            <a href="{{ route('pengunjung.excel') }}" class="flex items-center justify-center gap-2 bg-white hover:bg-green-50 border border-green-200 text-green-600 font-bold px-4 py-2.5 rounded-xl text-sm transition-colors shadow-sm">
                 <i class="ri-file-excel-2-line text-lg"></i>
                 Export Excel
             </a>
-            <a href="#" class="flex items-center justify-center gap-2 bg-white hover:bg-red-50 border border-red-200 text-red-500 font-bold px-4 py-2.5 rounded-xl text-sm transition-colors shadow-sm">
+            <a href="{{ route('pengunjung.pdf') }}" class="flex items-center justify-center gap-2 bg-white hover:bg-red-50 border border-red-200 text-red-500 font-bold px-4 py-2.5 rounded-xl text-sm transition-colors shadow-sm">
                 <i class="ri-file-pdf-line text-lg"></i>
                 Export PDF
             </a>

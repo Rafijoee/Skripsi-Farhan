@@ -35,4 +35,6 @@ Route::middleware('auth')->group(function () {
     ->name('visitors.export.excel');
     Route::get('visitors/export/pdf', [PengunjungController::class, 'exportPdf'])
     ->name('visitors.export.pdf');
+    Route::get('/pengunjung/export-excel', [PengunjungController::class, 'exportExcel'])->name('pengunjung.excel');
+    Route::get('/pengunjung/export-pdf', [PengunjungController::class, 'exportPdf'])->name('pengunjung.pdf');
 });
