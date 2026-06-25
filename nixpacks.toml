@@ -6,6 +6,10 @@ nixPkgs = [
   "nodejs_22"
 ]
 
-[variables]
-NIXPACKS_NODE_VERSION = "22"
-NIXPACKS_PHP_VERSION = "8.3"
+[phases.install]
+cmds = [
+  "node -v",
+  "npm -v",
+  "composer install --ignore-platform-reqs",
+  "npm ci"
+]
